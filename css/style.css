@@ -403,7 +403,8 @@ aside a:hover {
 .personal_info_inputs {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    justify-content: space-between;
+    gap: 8px;
 }
 
 .country_phone_codes {
