@@ -217,8 +217,12 @@ aside a:hover {
 
 .main_top_section_items {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     gap: 24px;
+    max-width: 323px;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .main_top_section_items a {
@@ -239,6 +243,13 @@ aside a:hover {
     flex-wrap: wrap;
     gap: 10px;
     align-items: center;
+    max-width: 336px;
+}
+
+.main_top_section_links {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .main_top_section_logos {
@@ -248,7 +259,7 @@ aside a:hover {
     border-radius: 600px;
     border: none;
     background-color: #F7F7F7;
-    padding: 6px;
+    padding: 5px;
 }
 
 .becameateacher_wrapper {
@@ -262,6 +273,8 @@ aside a:hover {
     border-radius: 50px;
     border: 1px solid #C7C7C7;
     padding: 8px 12px;
+    max-width: 146px;
+    font-size: 14px;
 }
 
 .main_image {
@@ -302,6 +315,8 @@ aside a:hover {
     font-size: 14px;
     color: #2F2F2F;
     line-height: 22px;
+    max-width: fit-content;
+    width: 100%;
 }
 
 .account_settings_options:focus {
@@ -444,6 +459,7 @@ aside a:hover {
     border-radius: 8px;
     border: 1px solid #C7C7C7;
     background-color: #F9FBFC;
+    max-width: 251px;
     width: 100%;
 }
 
@@ -543,6 +559,8 @@ aside a:hover {
 
 .personal_info_customization_options_wrapper {
     display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
     justify-content: space-between;
 }
 
@@ -703,7 +721,6 @@ aside a:hover {
 .user_page_role {
     display: flex;
     justify-content: center;
-    max-width: 133px;
     width: 100%;
     border-radius: 50px;
     border: 1px solid #C7C7C7;
@@ -749,7 +766,7 @@ aside a:hover {
 }
 
 .profile_page_about_textarea {
-   width: 100%;
+    width: 100%;
     height: 168px;
     resize: none;
     padding: 12px 16px;
@@ -761,4 +778,75 @@ aside a:hover {
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+.main_top_section_categories_wrapper {
+    display: none;
+    width: 32px;
+    height: 32px;
+}
+
+.main_top_section_categories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    appearance: none;
+    background: url("../icons/CategoriesLogo.svg") no-repeat;
+    background-position: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 600px;
+    background-color: #F7F7F7;
+    outline: none;
+
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+    .main_top_section_categories_wrapper {
+        display: flex;
+    }
+
+    aside {
+        display: none;
+    }
+
+    .main_top_section_links {
+        max-width: 255px;
+        font-size: 14px;
+    }
+
+    .personal_info {
+        flex-wrap: wrap-reverse;
+    }
+
+    .profile_page_wrapper {
+        max-width: unset;
+        width: 100%;
+    }
+
+    .main_top_section_items {
+        max-width: 311px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .main_content {
+        padding: 12px 16px;
+    }
+
+    .main_top_section_items {
+        max-width: 287px;
+        gap: 12px;
+       
+    }
+
+    .main_top_section_links {
+        max-width: 243px;
+        width: 100%;
+        gap: 8px;
+    }
+    
 }
